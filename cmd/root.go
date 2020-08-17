@@ -20,4 +20,7 @@ func init() {
 	cobra.OnInitialize()
 	rootCmd.AddCommand(hostCmd)
 	rootCmd.AddCommand(clusterCmd)
+	rootCmd.AddCommand(credentialCmd)
+	rootCmd.AddCommand(statusCmd)
+	rootCmd.AddCommand(projectCmd)
 }
