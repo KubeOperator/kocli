@@ -1,7 +1,11 @@
 package main
 
-import "kocli/cmd"
+import (
+	"kocli/cmd"
+	"kocli/pkg/config"
+)
 
 func main() {
-	cmd.Execute()
+	_ = config.LoadConfig()
+	_ = cmd.Execute()
 }

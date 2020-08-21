@@ -7,7 +7,8 @@ import (
 )
 
 const server = "localhost:8080"
-const token = "123456"
+
+var token = "123456"
 
 func GetApiClient(path string) *resty.Client {
 	client := resty.New()
@@ -15,3 +16,4 @@ func GetApiClient(path string) *resty.Client {
 		SetHeader("Accept", httputil.JSONContentType).
 		SetHostURL(fmt.Sprintf("http://%s/api/v1/%s", server, path))
 }
+
